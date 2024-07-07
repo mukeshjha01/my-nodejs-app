@@ -1,5 +1,5 @@
 #!/bin/bash
-# Stop the server if it is currently running
-pkill node
-# Start the server
-nohup node /var/www/html/server.js > /dev/null 2> /dev/null < /dev/null &
+cd /home/ec2-user/app
+npm install
+pm2 start devops.js --name "nodejs-app"
+
